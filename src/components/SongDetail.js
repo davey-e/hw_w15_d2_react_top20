@@ -1,10 +1,12 @@
 import React from 'react';
 
 const SongDetail = (props) => {
-  console.log("Props: ", props.songs);
+  console.log("Props: ", props);
   return (
-    <div>
-      <p>Song details</p>
+    <div className="song">
+      <p className="songTitle">
+        {props.title}
+      </p>
     </div>
   )
 }
