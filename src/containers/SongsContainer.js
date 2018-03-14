@@ -17,7 +17,7 @@ class SongsContainer extends Component{
       if(request.status !== 200) return;
       const jsonString = request.responseText;
       const songsObjects = JSON.parse(jsonString);
-      this.setState({songs: songsObjects});
+      this.setState({songs: songsObjects.feed.entry});
       console.log(this.state);
     })
     request.send();
